@@ -1,26 +1,22 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import ProductCard from '../components/ProductCard';
 
 const Home = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/productos')
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/productos`)
       .then((res) => res.json())
       .then((data) => setProducts(data))
-      .catch((error) => console.error('Error fetching products:', error));
+      .catch((error) => console.error('Error al cargar productos:', error));
   }, []);
 
   return (
     <div>
-      <h1>Bienvenido a la Tienda de Productos Digitales</h1>
+      <h1>Lista de Productos</h1>
       <div className="product-grid">
         {products.map((product) => (
-          <div key={product._id} className="product-card">
-            <h3>{product.name}</h3>
-            <p>{product.description}</p>
-            <p>${product.price}</p>
-            <button>Ver más</button>
-          </div>
+          <ProductCard key={product._id} product={product} />
         ))}
       </div>
     </div>
