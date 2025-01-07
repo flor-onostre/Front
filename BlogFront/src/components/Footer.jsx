@@ -4,46 +4,48 @@ import './Footer.css'
 
 const Footer = () => {
     return (
-        <div className="footer">
-      <h3 className="titulo">Sobre Nosotros</h3>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id corrupti
-        voluptas mollitia ullam deserunt veritatis fuga cumque excepturi
-        voluptates reprehenderit, voluptatum consectetur voluptatem architecto
-        quibusdam neque dicta debitis voluptate? Nisi.
-      </p>
-      <div className="links">
-        <div className="enlaces">
-          <h3>Enlaces Utiles</h3>
-          <ul className="listaEnlaces">
-            <li className="listItem">
-              <a href="">Contacto</a>
-            </li>
-            <li className="listItem">
-              <a href="">Terminos y condiciones</a>
-            </li>
-          </ul>
-        </div>
-        <div className="redes">
-          <h3>Redes Sociales</h3>
-          <ul className="listaEnlaces">
-            <li className="listItem">
-              <a href="">
-                <FontAwesomeIcon icon={faTwitter} className="icono" />
-              </a>
-            </li>
-            <li className="listItem">
-              <a href="">
-                <FontAwesomeIcon icon={faFacebook} className="icono" />
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div className="contmensaje">
-        <p className="mensaje">&copy; 2024 Tu Sitio de Blogs. Todos los derechos reservados.🙃</p>
-      </div>
-    </div>
+      <grid className="footer">
+        <h3 className="titulo">Sobre Nosotros</h3>
+          <p>
+            Buscamos que puedas comer rico y saludable sin que afecte tu salud y respetando tus elecciones de alimentación.
+          </p>
+          <div className="links">
+            <div className="enlaces">
+              <h3>Enlaces Utiles</h3>
+              <ul className="listaEnlaces">
+                <li className="listItem">
+                  <a href="" className='aenlaces'>Contacto</a>
+                </li>
+                <li className="listItem">
+                  <a href="" className='aenlaces'>Terminos y condiciones</a>
+                </li>
+              </ul>
+            </div>
+            <div className="redes">
+              <h3>Redes Sociales</h3>
+              <ul className="listaEnlacesRedes">
+              <li className="listItem">
+                  <a href="" className='aicono'>
+                    <FontAwesomeIcon icon={faInstagram} className="icono" />
+                  </a>
+                </li>
+                <li className="listItem">
+                  <a href="" className='aicono'>
+                    <FontAwesomeIcon icon={faTwitter} className="icono" />
+                  </a>
+                </li>
+                <li className="listItem">
+                  <a href="" className='aicono'>
+                    <FontAwesomeIcon icon={faFacebook} className="icono" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="contmensaje">
+            <p className="mensaje">&copy; 2024 Recetas para todos. Todos los derechos reservados.</p>
+          </div>
+      </grid>
     );
 }
 
