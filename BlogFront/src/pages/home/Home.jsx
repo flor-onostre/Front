@@ -7,7 +7,7 @@ const Home = () => {
 
     useEffect(() => {
         const fetchback = async () => {
-          const response = await fetch( "http://localhost:3000/productos",{
+          const response = await fetch( "http://localhost:3000/blogs",{
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -23,6 +23,7 @@ const Home = () => {
 
     return (
         <div>
+          <h1>Home</h1>
         {blogs.map((blog) => (
           <Blog blog={blog} key={blog.source.id} />
         ))}

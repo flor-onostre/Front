@@ -9,26 +9,24 @@ import Register from './pages/register/Register.jsx'
 import MyBlogs from './pages/myBlogs/MyBlogs.jsx'
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
-import Logout from './pages/login/Logout.jsx'
 
 function App() {
-
   return (
     <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/crearBlog" element={<CrearBlog />} />
-        <Route path="/modificarBlog/:id" element={<ModificarBlog />} />
-        <Route path="/mis-blogs" element={<VerBlog />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/perfil" element={<MyBlogs />} />
-        <Route path="/logout" element={<Logout />} />
-      </Routes>
-      <Footer />
+    <Header/>
+    <Routes>
+      <Route path='/' element={<Home/>} />
+      <Route path='/blogs/:id' element={<VerBlog/>} />
+      <Route path='/crear-blog' element={<CrearBlog/>} />
+      <Route path='/modificar-blog/:id' element={<ModificarBlog/>} />
+      <Route path='/login' element={<Login/>} />
+      <Route path='/register' element={<Register/>} />
+      <Route path='/mis-blogs' element={<MyBlogs/>} />
+      <Route path='*' element={<h1>404</h1>} />
+    </Routes>
+    <Footer/>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;

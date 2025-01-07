@@ -13,7 +13,10 @@ const VerBlog = () => {
     //console.log(blogs.filter((blog)=>{blog.source.id===idblog}))
 
     return (
+        <div>
+        <h1>Ver Blog</h1>
         <DetalleBlog blog={blog}/>
+        </div>
     )
 }
 
