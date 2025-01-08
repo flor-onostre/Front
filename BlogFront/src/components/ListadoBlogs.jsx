@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Blog from "../pages/Home/Blog.jsx";
+import Blog from "../pages/home/Blog.jsx";
 import BlogAdmin from "../pages/myBlogs/BlogsAdmin.jsx";
 const ListadoBlogs = ({ isLogged = false }) => {
   const backurl = import.meta.env.REACT_APP_BACKEND_URL;
