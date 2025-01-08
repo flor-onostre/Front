@@ -1,0 +1,80 @@
+.footer{
+    display: block;
+    background-color: #8B456A;
+    color: white;
+    text-align: "center";
+    width: 100%;
+    bottom: 0;
+}
+.enlaces{
+    display: flex;
+    flex-direction: column;
+}
+.listaEnlaces{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.listaEnlacesRedes{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: white;
+}
+.listItem{
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin: 0;
+    color: white;
+}
+.mensaje{
+    margin: 0;
+    padding: 10px;
+}
+.titulo{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px 10px 10px 10px;
+    margin: auto;
+}
+.icono{
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.aicono:hover{
+    background-color: #7c174d;
+    color: black;
+    border-radius: 10px;
+}
+
+.aicono{
+    color: white;
+    padding: 5px;
+}
+
+.aenlaces{
+    color: white;
+    padding: 5px;
+}
+.aenlaces:hover{
+    background-color: #7c174d;
+    color: black;
+    border-radius: 10px;
+}

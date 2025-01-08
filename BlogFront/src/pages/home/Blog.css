@@ -1,0 +1,35 @@
+.contenedor{
+    background-color: grey;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    width: 80%;
+    margin: 10px auto;
+}
+
+.img{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.datos{
+    padding: 10px;
+}
+
+.subdatos{
+    display: flex;
+    flex-direction: row;
+}
+
+.autor{
+    padding-left: 10px;
+    font-weight: bold;
+    margin-right: 20px;
+}
