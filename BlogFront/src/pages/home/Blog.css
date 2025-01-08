@@ -1,8 +1,9 @@
 .contenedor{
     background-color: grey;
-    border-radius: 10px;
-    
-    padding: 10px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
     display: flex;
     flex-direction: row;
     cursor: pointer;
@@ -14,7 +15,8 @@
     height: 300px;
     width: 300px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 20px;
+    margin: 20px;
 }
 
 .datos{
@@ -27,6 +29,7 @@
 }
 
 .autor{
-    padding-right: 20px;
+    padding-left: 10px;
     font-weight: bold;
+    margin-right: 20px;
 }

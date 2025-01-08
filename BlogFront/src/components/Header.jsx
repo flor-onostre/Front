@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom"
 import { useContext } from "react"
 import { AuthContext } from "../context/AuthContext"
+import { Grid } from "@mui/material"
 import "./Header.css"
 
 const links = [{to:"/", label: "Inicio"}]
@@ -29,8 +30,8 @@ const Header = () => {
     const { isLogged } = useContext(AuthContext)
 
     return (
-        <grid className="header">
-        <grid className="contenedorNav">
+        <Grid className="header">
+        <Grid className="contenedorNav">
             <div className="contendorLinks">
                 {links.map((link) => (
                     <NavLink key={link.to} to={link.to} className="link">{link.label}</NavLink>
@@ -51,13 +52,13 @@ const Header = () => {
                     </NavLink>
                 ))}
             </div>
-        </grid>
+        </Grid>
         <div className="contenedorLinksCategorias">    
                 {linksCategorias.map((link) => (
                     <NavLink key={link.to} to={link.to} className={"linkCategorias"}>{link.label}</NavLink>
                 ))}
             </div> 
-        </grid>
+        </Grid>
     )
 }
 

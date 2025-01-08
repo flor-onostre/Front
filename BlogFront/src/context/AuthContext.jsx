@@ -3,6 +3,7 @@ import { createContext, useState, useEffect } from 'react';
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
+  const backurl = import.meta.env.VITE_BACK_URL;
   const [isLogged, setIsLogged] = useState(() => {
     const storedValue = localStorage.getItem('isLogged');
     return storedValue === 'true';
@@ -27,29 +28,33 @@ export const AuthProvider = ({ children }) => {
     }
   }, [refreshToken]);
 
-  const FetchBackGetRefreshToken = async () => {
-    const response = await fetch('http://localhost:3000/auth/token', {
-      method: 'POST',
-      headers: { 
-        'Content-Type': 'application/json',
-        "refreshtoken": refreshToken
-       },
+  const handleRefreshToken = async () => {
+    const response = await fetch(backurl + "auth/token", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "x-refresh-token": refreshToken,
+      },
     });
-    if(response.ok){
-      const responsejson = await response.json();
-      setAccessToken(responsejson.data);
-      return responsejson.data
+    const responsejson = await response.json();
+    if (response.ok) {
+      setAccessToken(responsejson.data.accesstoken);
     }else{
-      return null
+      setIsLogged(false);
+      setAccessToken(null);
+      setRefreshToken(null);
+      return -1
     }
-  }
+  };
 
   useEffect(() => {
     localStorage.setItem('isLogged', isLogged);
   }, [isLogged]);
 
   return (
-    <AuthContext.Provider value={{ isLogged, setIsLogged, accessToken, setAccessToken, refreshToken, setRefreshToken,FetchBackGetRefreshToken }}>
+    <AuthContext.Provider
+      value={{ isLogged, setIsLogged, handleRefreshToken, accessToken,setAccessToken,setRefreshToken }}
+    >
       {children}
     </AuthContext.Provider>
   );
