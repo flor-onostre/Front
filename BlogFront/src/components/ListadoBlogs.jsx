@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Blog from "../pages/Home/Blog.jsx";
 import BlogAdmin from "../pages/myBlogs/BlogsAdmin.jsx";
 const ListadoBlogs = ({ isLogged = false }) => {
-  const backurl = process.meta.env.REACT_APP_BACKEND_URL;
+  const backurl = import.meta.env.REACT_APP_BACKEND_URL;
   //si es true hardcodeamos si es false mostramos todo
   const [blogs, setBlogs] = useState([]);
   //const [blogsFilter, setBlogsFilter] = useState([]);
@@ -14,6 +14,7 @@ const ListadoBlogs = ({ isLogged = false }) => {
   console.log(responsejson.data)
   setBlogs(responsejson.data)
   }
+
 
   const fetchBorrarBlog = async (id) => {
     const response = await fetch(`${backurl}blogs/${id}`, { 
