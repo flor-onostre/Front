@@ -1,13 +1,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faTwitter, faFacebook } from '@fortawesome/free-brands-svg-icons'
 import './Footer.css'
-import { Grid } from '@mui/material'
 
 const Footer = () => {
     return (
-      <Grid className="footer">
+      <div className="footer">
         <h3 className="titulo">Sobre Nosotros</h3>
-          <p>
+          <p className='descripcion'>
             Buscamos que puedas comer rico y saludable sin que afecte tu salud y respetando tus elecciones de alimentación.
           </p>
           <div className="links">
@@ -46,7 +45,7 @@ const Footer = () => {
           <div className="contmensaje">
             <p className="mensaje">&copy; 2024 Recetas para todos. Todos los derechos reservados.</p>
           </div>
-      </Grid>
+      </div>
     );
 }
 

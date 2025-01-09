@@ -9,7 +9,7 @@ const ListadoBlogs = ({ isLogged = false }) => {
   let blogsFilter = blogs
 
   const fetchback = async () => {
-    const response = await fetch(`${backurl}blogs`)
+    const response = await fetch(`${backurl}/blogs`)
   const responsejson = await response.json()
   console.log(responsejson.data)
   setBlogs(responsejson.data)
@@ -17,7 +17,7 @@ const ListadoBlogs = ({ isLogged = false }) => {
 
 
   const fetchBorrarBlog = async (id) => {
-    const response = await fetch(`${backurl}blogs/${id}`, { 
+    const response = await fetch(`${backurl}/blogs/${id}`, { 
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
      })
