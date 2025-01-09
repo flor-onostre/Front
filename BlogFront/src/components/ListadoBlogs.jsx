@@ -50,6 +50,7 @@ const ListadoBlogs = ({ isLogged = false }) => {
 
   return (
     <>
+        <h2>Listado</h2>
       {blogs.map((blog) => (
         <Blog blog={blog} key={blog.id} />
       ))}
