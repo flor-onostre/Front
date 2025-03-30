@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import "./DetalleBlog.css"
 import { Link } from "react-router-dom";
 const DetalleBlog = () => {
-  const backurl = import.meta.env.VITE_BACK_URL
+  const backurl = import.meta.env.REACT_APP_BACKEND_URL
     const { id } = useParams()
     const [blog, setBlog] = useState({});
     
@@ -24,7 +24,6 @@ const DetalleBlog = () => {
           <h2 className="titulo">{blog.titulo}</h2>
           <div className="subtitulo">
             <p className="autor">{blog.author || "autor por defecto"}</p>
-            <p>Chau</p>
             <p>{new Date(blog.fechaPublicacion).toLocaleString("es")}</p>
           </div>
           <p className="description">{blog.descripcion}</p>

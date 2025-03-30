@@ -1,10 +1,11 @@
 .footer{
-    display: block;
     background-color: #8B456A;
     color: white;
-    text-align: "center";
-    width: 100%;
+    width: 100vw;
     bottom: 0;
+    display: flexbox;
+    justify-content: center;
+    justify-items: center;
 }
 .enlaces{
     display: flex;
@@ -77,4 +78,8 @@
     background-color: #7c174d;
     color: black;
     border-radius: 10px;
+}
+
+.descripcion{
+    margin: 0px 50px;
 }

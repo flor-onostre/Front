@@ -10,6 +10,7 @@ const Blog = ({ blog }) => {
         <h2 className="titulo">{blog.titulo}</h2>
         <div className="subtitulo">
           <p className="autor">{blog.author || "autor por defecto"}</p>
+          <p>Hola</p>
           <p>{new Date(blog.fechaPublicacion).toLocaleString("es")}</p>
         </div>
         <p className="description">{blog.descripcion}</p>

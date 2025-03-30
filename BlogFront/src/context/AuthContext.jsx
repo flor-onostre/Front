@@ -3,7 +3,7 @@ import { createContext, useState, useEffect } from 'react';
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const backurl = import.meta.env.VITE_BACK_URL;
+  const backurl = import.meta.env.REACT_APP_BACKEND_URL;
   const [isLogged, setIsLogged] = useState(() => {
     const storedValue = localStorage.getItem('isLogged');
     return storedValue === 'true';

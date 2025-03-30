@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Blog from "../pages/Home/Blog.jsx";
+import Blog from "../pages/home/Blog.jsx";
 import BlogAdmin from "../pages/myBlogs/BlogsAdmin.jsx";
 const ListadoBlogs = ({ isLogged = false }) => {
   const backurl = import.meta.env.REACT_APP_BACKEND_URL;
@@ -9,7 +9,7 @@ const ListadoBlogs = ({ isLogged = false }) => {
   let blogsFilter = blogs
 
   const fetchback = async () => {
-    const response = await fetch(`${backurl}blogs`)
+    const response = await fetch(`${backurl}/blogs`)
   const responsejson = await response.json()
   console.log(responsejson.data)
   setBlogs(responsejson.data)
@@ -17,7 +17,7 @@ const ListadoBlogs = ({ isLogged = false }) => {
 
 
   const fetchBorrarBlog = async (id) => {
-    const response = await fetch(`${backurl}blogs/${id}`, { 
+    const response = await fetch(`${backurl}/blogs/${id}`, { 
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
      })
@@ -50,6 +50,7 @@ const ListadoBlogs = ({ isLogged = false }) => {
 
   return (
     <>
+        <h2>Listado</h2>
       {blogs.map((blog) => (
         <Blog blog={blog} key={blog.id} />
       ))}
